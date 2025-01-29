@@ -1,0 +1,31 @@
+﻿/* Fix conflicts with base css */
+
+a {text-decoration:none !important;font-weight:normal;}
+.wrapper footer p a {font-weight:normal !important;}
+
+.w3-codespan {
+cursor: pointer;
+}
+
+#copyMessage {
+display: none;
+margin-bottom: 10px;
+}
+
+.w3-third {
+  padding: 0 !important;
+}
+
+@media (min-width: 601px) {
+  .w3-col.m6, .w3-half {
+    width: 45%!important;
+  }
+}
+
+.w3-input {
+  width: 85%;
+}
+
+input[type="submit"] {
+  background: green !important;
+}
