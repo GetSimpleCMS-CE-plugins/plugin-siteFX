@@ -30,7 +30,9 @@ function effects_selector_admin_page() {
 
         // Display the success message
         echo '
-		<p id="success-message">Effect saved successfully!</p>';
+		<div class="w3-panel w3-green w3-round-large">
+			<p style="padding-top:15px;font-size:1.25em" id="success-message">Effect updated successfully!</p>
+		</div>';
 		echo '
 		<style>
 			#success-message {opacity: 1; transition: opacity 1s ease-in-out;}
@@ -59,9 +61,9 @@ function effects_selector_admin_page() {
 		<p>Festivus for the rest of us. Add some special occasion or holiday decor to your site.</p>
 		<hr>
 
-			<div class="w3-container">
-				<p>Select the type of bling you would like to add to your page.</p>
-				<form method="post" action="">';
+		<div class="w3-container">
+			<p>Select the type of bling you would like to add to your page.</p>
+			<form method="post" action="">';
 				
     $effects = array(
         'none' => 'None',
@@ -86,9 +88,10 @@ function effects_selector_admin_page() {
     }
 
     echo '
-					<br>
-					<input class="w3-btn w3-green w3-round w3-margin-bottom" type="submit" value="Save Effect">
-				</form>
+				<br>
+				<input class="w3-btn w3-medium w3-green w3-round w3-margin-bottom" type="submit" value="Save Effect">
+			</form>
+				
 			<footer class="w3-border-top w3-padding-top-32 margin-bottom-none">
 				<div id="donate paypal">
 				<a class="w3-button w3-round-xxlarge" style="background:#F44336;color:white;" href="https://getsimple-ce.ovh/donate" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle" width="24" height="24" viewBox="0 0 24 24"><rect width="24" height="24" fill="none"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="48" stroke-dashoffset="48" d="M17 9v9c0 1.66 -1.34 3 -3 3h-6c-1.66 0 -3 -1.34 -3 -3v-9Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.6s" values="48;0"/></path><path stroke-dasharray="14" stroke-dashoffset="14" d="M17 9h3c0.55 0 1 0.45 1 1v3c0 0.55 -0.45 1 -1 1h-3"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="14;0"/></path><mask id="lineMdCoffeeLoop0"><path stroke="#fff" d="M8 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M12 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4M16 0c0 2-2 2-2 4s2 2 2 4-2 2-2 4 2 2 2 4"><animateMotion calcMode="linear" dur="3s" path="M0 0v-8" repeatCount="indefinite"/></path></mask><rect width="24" height="0" y="7" fill="currentColor" mask="url(#lineMdCoffeeLoop0)"><animate fill="freeze" attributeName="y" begin="0.8s" dur="0.6s" values="7;2"/><animate fill="freeze" attributeName="height" begin="0.8s" dur="0.6s" values="0;5"/></rect></g></svg> Buy us a coffee</a>
