@@ -26,7 +26,7 @@ function effects_selector_admin_page() {
     if ($_POST) {
         // Save the selected effect
         $selected_effect = isset($_POST['effect']) ? $_POST['effect'] : 'none';
-        file_put_contents(GSDATAOTHERPATH . 'selected_effect.txt', $selected_effect);
+        file_put_contents(GSDATAOTHERPATH . 'siteFX.txt', $selected_effect);
 
         // Display the success message
         echo '
@@ -53,7 +53,7 @@ function effects_selector_admin_page() {
     }
 
     // Read the currently selected effect
-    $selected_effect = file_exists(GSDATAOTHERPATH . 'selected_effect.txt') ? file_get_contents(GSDATAOTHERPATH . 'selected_effect.txt') : 'none';
+    $selected_effect = file_exists(GSDATAOTHERPATH . 'siteFX.txt') ? file_get_contents(GSDATAOTHERPATH . 'siteFX.txt') : 'none';
 
     // Display the form
     echo '
@@ -107,7 +107,7 @@ add_action('theme-footer', 'add_effect_script');
 function add_effect_script() {
 	
     // Read the selected effect
-    $selected_effect = file_exists(GSDATAOTHERPATH . 'selected_effect.txt') ? file_get_contents(GSDATAOTHERPATH . 'selected_effect.txt') : 'none';
+    $selected_effect = file_exists(GSDATAOTHERPATH . 'siteFX.txt') ? file_get_contents(GSDATAOTHERPATH . 'siteFX.txt') : 'none';
 
     // Add the corresponding JavaScript
     switch ($selected_effect) {
